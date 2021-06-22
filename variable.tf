@@ -1,6 +1,5 @@
 variable "region" {
   description = "Codebuild region"
-  default     = "us-east-1"
 }
 
 variable "artifacts_type" {
@@ -10,32 +9,26 @@ variable "artifacts_type" {
 
 variable "project_name" {
   description = "Project Name (Only alpha chars and dashes allowed)"
-  default     = "terraform-modules-examples"
 }
 
 variable "git_repo" {
   description = "Github repo "
-  default     = "https://github.com/aws-ia/terraform-modules-examples"
 }
 
 variable "git_clone_depth" {
   description = "Repo clone depth"
-  default     = "1"
 }
 
 variable "build_image" {
   description = "Build container image"
-  default     = "aws/codebuild/amazonlinux2-x86_64-standard:3.0"
 }
 
 variable "compute_type" {
   description = "Compute type"
-  default     = "BUILD_GENERAL1_MEDIUM"
 }
 
 variable "build_spec" {
   description = "Relative Path to build spec file"
-  default     = "./templates/build_spec/noop.yml"
 
 }
 
@@ -62,6 +55,5 @@ variable "codebuild_role_arn" {
 variable "environment" {
   description = "Environment in which the script is run. Eg: develop, main, etc"
   type        = string
-  default     = "develop"
 }
 
